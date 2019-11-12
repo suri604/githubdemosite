@@ -1,0 +1,19 @@
+
+<div style="text-align: center" style="">
+  
+<br>
+<h3>Search Here</h3>
+
+
+<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text"><br><br>
+
+<button (click)="sendMessage()">Send</button>
+<ng-container *ngFor="let message of messages | async">
+
+  <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                    'to':   message.sentBy === 'user' }">
+    {{ message.content }}
+  </div>
+
+</ng-container>
+</div>

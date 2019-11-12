@@ -1,5 +1,11 @@
 <br><br>
-<div style="text-align: center">
-<button (click)="onClick()">Get All Repository</button>
+<div class="box" style="text-align: center">
+<h1 style="color:indigo"Repositories Present></h1>
+<div  *ngFor="let repo of repos; index as i">
+    <tr id="{{repo.name}}">
+    <th scope="row">{{i+1}}</th>
+    <td>{{repo.name}}</td>
+     </tr>
+</div>
 </div>
 <br><br>

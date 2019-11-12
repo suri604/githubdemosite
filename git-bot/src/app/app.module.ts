@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import {GitserviceService} from './gitservice.service';
+import { ChatService } from './chat.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,7 @@ import {GitserviceService} from './gitservice.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [GitserviceService],
+  providers: [GitserviceService, ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

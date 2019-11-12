@@ -7,7 +7,7 @@ export class GitserviceService {
   constructor(private http: HttpClient) { }
   private _profileUrl: string = 'https://api.github.com/user/suri604/repos';
   private _createUrl: string = 'https://api.github.com/user/repos';
-  private _token: string = '?access_token=bd6c35dbd7dcd25bb530c7249ccbac02427d4880';
+  private _token: string = '?access_token=d323c8c1936f502bbb0fbedecb0ca6edceaa2cf4';
   private _deleteUrl: string = 'https://api.github.com/repos/suri604/';
   getAllRepos() {
     return this.http.get(this._profileUrl + this._token);

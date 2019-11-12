@@ -7,12 +7,12 @@ import { GitserviceService } from '../gitservice.service';
   styleUrls: ['./get-repo.component.css']
 })
 export class GetRepoComponent implements OnInit {
-   repos: any;
-  constructor(private gitserviceService: GitserviceService) { }
+  public repos: any =[];
+  public repo:any =[];
+  constructor(private gitserviceService: GitserviceService) {
+   }
 
   ngOnInit() {
-  }
-  onClick() {
     this.gitserviceService.getAllRepos().subscribe(data => {
       this.repos = data;
     });
